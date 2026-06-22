@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AutoCraft Premium Car Care — Multi-Brand Car Service & Auto Body Shop in [Your City]</title>
+<meta name="description" content="Multi brand car service near me. AutoCraft is a premium car workshop & auto body shop in [Your City] for periodic servicing, denting & painting, 3M ceramic coating, detailing, car computer scanning, key programming, windshield replacement, battery & roadside assistance and luxury car repair (Audi, BMW, Mercedes, Jaguar, Land Rover)." />
+<meta name="keywords" content="multi brand car service near me, periodic car servicing center, best multi brand car garage, premium car workshop near me, luxury car repair shop, audi bmw mercedes service center, car denting and painting near me, auto body shop repairs, garage car repair, 3M car coating service near me, ceramic coating price for car, professional car detailing workshop, car interior deep cleaning service, car seat dry cleaning near me, car computer scanning near me, car electrical repair shop, car key programmer near me, lost car key replacement maker, car windshield replacement near me, front glass crack repair car, car jump start service near me, roadside battery jumpstart, buy new car battery nearby, custom car seat covers shop, car floor mats fitting near me, premium car accessories store, car service in [Your City]" />
+
+<!--
+  STACK: Tailwind CSS (Play CDN) — no hand-written CSS. Theme in tailwind.config.
+  IMAGES: loremflickr placeholders (each has a gradient fallback). Replace every
+  "REPLACE-IMG" with the client's licensed photos before launch.
+  MAP: uses Google's no-key embed (output=embed). Swap the q= address.
+  FORM: submits to WhatsApp by default; repoint the data-action to your backend.
+  REVIEWS: live pull needs reviews.php configured (API key + Place ID). Until then
+  the curated set below shows.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        paper:'#f6f5f1', paper2:'#efece4', ink:'#121217', inksoft:'#3c3c46',
+        brand:{ DEFAULT:'#fd7b2b', deep:'#e85d10', soft:'#fff3ea' },
+      },
+      fontFamily: {
+        display:['"Bricolage Grotesque"','ui-sans-serif','sans-serif'],
+        body:['Inter','ui-sans-serif','sans-serif'],
+        mono:['"Space Mono"','ui-monospace','monospace'],
+      },
+      keyframes: {
+        marquee:{ '0%':{transform:'translateX(0)'}, '100%':{transform:'translateX(-50%)'} },
+        marquee2:{ '0%':{transform:'translateX(-50%)'}, '100%':{transform:'translateX(0)'} },
+        float:{ '0%,100%':{transform:'translateY(0)'}, '50%':{transform:'translateY(-10px)'} },
+        bob:{ '0%,100%':{transform:'rotate(-45deg) translateY(0)'}, '50%':{transform:'rotate(-45deg) translateY(-8px)'} },
+        kenburns:{ '0%':{transform:'scale(1)'}, '100%':{transform:'scale(1.14)'} },
+        cardrive:{ '0%':{left:'-6%'}, '100%':{left:'104%'} },
+      },
+      animation: {
+        marquee:'marquee 30s linear infinite', marquee2:'marquee2 34s linear infinite',
+        float:'float 5s ease-in-out infinite', bob:'bob 2.6s ease-in-out infinite',
+        kenburns:'kenburns 9s ease-out forwards', cardrive:'cardrive 7s linear infinite',
+      },
+      boxShadow:{ card:'0 24px 60px -28px rgba(40,28,16,.34)', soft:'0 12px 30px -16px rgba(40,28,16,.26)' },
+    } },
+  };
+</script>
+</head>
+
+<body class="font-body bg-paper text-ink antialiased overflow-x-hidden selection:bg-brand selection:text-white">
+
+<!-- ===================== NAV ===================== -->
+<header id="nav" class="fixed inset-x-0 top-0 z-50 text-white transition-all duration-300">
+  <div class="max-w-[1240px] mx-auto px-6 h-[78px] flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 font-display font-extrabold text-[1.18rem] tracking-tight">
+      <span class="w-10 h-10 rounded-xl grid place-items-center bg-brand shadow-lg shadow-brand/40 shrink-0">
+        <svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none"><path d="M3 13l2-5a3 3 0 0 1 2.8-2h8.4A3 3 0 0 1 19 8l2 5v5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="14.5" r="1.3" fill="#fff"/><circle cx="16.5" cy="14.5" r="1.3" fill="#fff"/></svg>
+      </span>
+      <span class="leading-none">AutoCraft<span class="block font-mono font-normal text-[.58rem] tracking-[.16em] text-brand uppercase mt-0.5">Premium Car Care</span></span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8 text-[.92rem] font-medium">
+      <a href="#services" class="opacity-90 hover:opacity-100 hover:text-brand transition">Services</a>
+      <a href="#showcase" class="opacity-90 hover:opacity-100 hover:text-brand transition">Work</a>
+      <a href="#process" class="opacity-90 hover:opacity-100 hover:text-brand transition">Process</a>
+      <a href="#reviews" class="opacity-90 hover:opacity-100 hover:text-brand transition">Reviews</a>
+      <a href="#faq" class="opacity-90 hover:opacity-100 hover:text-brand transition">FAQ</a>
+      <a href="#area" class="opacity-90 hover:opacity-100 hover:text-brand transition">Visit</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="tel:+919800000000" class="hidden md:flex items-center gap-2 font-mono text-[.85rem]">
+        <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>+91 98000 00000
+      </a>
+      <a href="#book" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm text-white bg-brand hover:bg-brand-deep hover:-translate-y-0.5 transition-all shadow-lg shadow-brand/40">Book Service</a>
+      <button id="burger" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-11 h-11 rounded-xl border-[1.5px] border-current/40 grid place-items-center">
+        <span class="block w-5 h-0.5 bg-current transition-transform"></span>
+        <span class="block w-5 h-0.5 bg-current my-1 transition-opacity"></span>
+        <span class="block w-5 h-0.5 bg-current transition-transform"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileMenu" class="fixed inset-x-0 top-[78px] bottom-0 z-40 bg-ink/98 backdrop-blur-xl px-6 py-8 -translate-y-3 opacity-0 pointer-events-none transition lg:hidden text-white">
+  <a href="#services" class="block font-display text-2xl font-bold py-4 border-b border-white/10">Services</a>
+  <a href="#showcase" class="block font-display text-2xl font-bold py-4 border-b border-white/10">Work</a>
+  <a href="#process" class="block font-display text-2xl font-bold py-4 border-b border-white/10">Process</a>
+  <a href="#reviews" class="block font-display text-2xl font-bold py-4 border-b border-white/10">Reviews</a>
+  <a href="#faq" class="block font-display text-2xl font-bold py-4 border-b border-white/10">FAQ</a>
+  <a href="#area" class="block font-display text-2xl font-bold py-4 border-b border-white/10">Visit</a>
+  <a href="#book" class="mt-7 w-full inline-flex justify-center items-center px-6 py-3.5 rounded-full font-semibold text-white bg-brand">Book Service</a>
+</div>
+<span id="top"></span>
+
+<!-- ===================== HERO (bg carousel + booking form) ===================== -->
+<section class="relative min-h-screen flex items-center pt-[78px] overflow-hidden bg-ink">
+  <!-- background image carousel -->
+  <div class="absolute inset-0 z-0">
+    <!-- REPLACE-IMG: hero background slides -->
+    <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-[1200ms]"><img src="https://loremflickr.com/1600/900/luxury,car,workshop?lock=71" class="w-full h-full object-cover animate-kenburns" alt="Luxury car workshop" onerror="this.style.display='none'"></div>
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms]"><img src="https://loremflickr.com/1600/900/car,mechanic,garage?lock=72" class="w-full h-full object-cover" alt="Mechanic at work" onerror="this.style.display='none'"></div>
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms]"><img src="https://loremflickr.com/1600/900/car,detailing,polish?lock=73" class="w-full h-full object-cover" alt="Car detailing" onerror="this.style.display='none'"></div>
+    <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-[1200ms]"><img src="https://loremflickr.com/1600/900/sportscar,studio?lock=74" class="w-full h-full object-cover" alt="Premium car" onerror="this.style.display='none'"></div>
+  </div>
+  <!-- overlays for legibility -->
+  <div class="absolute inset-0 z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/40"></div>
+  <div class="absolute inset-0 z-10 bg-gradient-to-t from-ink via-transparent to-ink/60"></div>
+
+  <div class="relative z-20 w-full max-w-[1240px] mx-auto px-6 py-16 grid lg:grid-cols-[1.05fr_.95fr] gap-12 items-center">
+    <!-- left copy -->
+    <div class="text-white" data-reveal>
+      <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand bg-brand/15 border border-brand/40 px-3.5 py-1.5 rounded-lg backdrop-blur">
+        <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>Multi-brand workshop · Est. 2010
+      </span>
+      <h1 class="font-display font-extrabold tracking-[-.035em] leading-[1.03] text-[2.7rem] sm:text-5xl xl:text-[4.6rem] mt-6">
+        Your trusted multi-brand <span class="text-brand">car service</span> &amp; auto body shop
+      </h1>
+      <p class="text-white/75 text-[1.16rem] mt-6 mb-8 max-w-[540px]">Premium servicing, diagnostics, denting &amp; painting, detailing, battery replacement and luxury car care — all under one roof, by certified technicians.</p>
+      <div class="flex flex-wrap gap-3.5 mb-9">
+        <a href="#book" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white bg-brand hover:bg-brand-deep hover:-translate-y-0.5 transition-all shadow-lg shadow-brand/40">Book Service
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="tel:+919800000000" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white border border-white/30 hover:bg-white/10 hover:-translate-y-0.5 transition-all backdrop-blur">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Call Now</a>
+      </div>
+      <ul class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-white/90">
+        <li class="flex items-center gap-2"><svg class="w-[18px] h-[18px] text-emerald-400" viewBox="0 0 24 24" fill="none"><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>Certified Technicians</li>
+        <li class="flex items-center gap-2"><svg class="w-[18px] h-[18px] text-sky-400" viewBox="0 0 24 24" fill="none"><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>Genuine Parts</li>
+        <li class="flex items-center gap-2"><svg class="w-[18px] h-[18px] text-violet-400" viewBox="0 0 24 24" fill="none"><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>Transparent Pricing</li>
+      </ul>
+      <!-- carousel dots -->
+      <div id="heroDots" class="flex gap-2 mt-9"></div>
+    </div>
+
+    <!-- right: booking form -->
+    <div data-reveal>
+      <div class="bg-white/95 backdrop-blur-xl rounded-3xl p-7 sm:p-8 shadow-card border border-white/40">
+        <div class="flex items-center gap-3 mb-1">
+          <span class="w-10 h-10 rounded-xl bg-brand grid place-items-center shrink-0"><svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none"><path d="M8 2v3M16 2v3M3 9h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <div><h2 class="font-display text-xl font-bold leading-none">Book your service</h2><p class="text-xs text-stone-500 mt-1">Free quote in minutes · No obligation</p></div>
+        </div>
+        <form id="bookForm" data-action="" class="mt-5 space-y-3">
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-stone-500 mb-1">Name</label>
+              <input name="name" required placeholder="Your name" class="w-full px-3.5 py-2.5 rounded-xl bg-paper border border-stone-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-stone-500 mb-1">Phone</label>
+              <input name="phone" required type="tel" placeholder="Mobile number" class="w-full px-3.5 py-2.5 rounded-xl bg-paper border border-stone-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-stone-500 mb-1">Car brand</label>
+              <select name="brand" class="w-full px-3.5 py-2.5 rounded-xl bg-paper border border-stone-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+                <option value="">Select brand</option>
+                <option>Audi</option><option>BMW</option><option>Mercedes-Benz</option><option>Toyota</option><option>Honda</option><option>Hyundai</option><option>Kia</option><option>Volkswagen</option><option>Skoda</option><option>Mahindra</option><option>Tata</option><option>Volvo</option><option>Jaguar</option><option>Land Rover</option><option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-stone-500 mb-1">Date</label>
+              <input name="date" type="date" class="w-full px-3.5 py-2.5 rounded-xl bg-paper border border-stone-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stone-500 mb-1">Service needed</label>
+            <select name="service" class="w-full px-3.5 py-2.5 rounded-xl bg-paper border border-stone-200 text-sm focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
+              <option value="">Select a service</option>
+              <option>Periodic / General Service</option><option>Premium / Luxury Car Service</option><option>Denting &amp; Painting</option><option>Detailing &amp; Ceramic Coating</option><option>Interior Deep Cleaning</option><option>Diagnostics &amp; Electrical</option><option>Key Programming</option><option>Windshield &amp; Glass</option><option>Battery &amp; Breakdown</option><option>Accessories &amp; Seat Covers</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-brand hover:bg-brand-deep transition-all shadow-lg shadow-brand/30">
+            <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none"><path d="M3 21l1.6-4.5A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L3 21z" fill="currentColor"/></svg>
+            Book on WhatsApp
+          </button>
+          <p id="bookNote" class="text-center text-xs text-stone-400">We reply within minutes during working hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- keyword marquee strip -->
+<div class="bg-brand text-white py-3.5 overflow-hidden">
+  <div class="flex gap-8 w-max animate-marquee font-display font-semibold text-sm uppercase tracking-wide whitespace-nowrap">
+    <span>★ Multi-Brand Service</span><span>★ Denting &amp; Painting</span><span>★ 3M Ceramic Coating</span><span>★ Car Detailing</span><span>★ Computer Scanning</span><span>★ Key Programming</span><span>★ Windshield Replacement</span><span>★ Battery &amp; Roadside</span><span>★ Luxury Car Repair</span>
+    <span>★ Multi-Brand Service</span><span>★ Denting &amp; Painting</span><span>★ 3M Ceramic Coating</span><span>★ Car Detailing</span><span>★ Computer Scanning</span><span>★ Key Programming</span><span>★ Windshield Replacement</span><span>★ Battery &amp; Roadside</span><span>★ Luxury Car Repair</span>
+  </div>
+</div>
+
+<!-- ===================== STATS ===================== -->
+<section class="bg-white py-14">
+  <div class="max-w-[1240px] mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center" data-reveal>
+    <div><div class="font-display font-extrabold text-4xl md:text-5xl text-brand"><span data-count="14">0</span>+</div><p class="text-sm text-stone-500 mt-1">Brands serviced</p></div>
+    <div><div class="font-display font-extrabold text-4xl md:text-5xl text-violet-600"><span data-count="40">0</span>k</div><p class="text-sm text-stone-500 mt-1">Cars repaired</p></div>
+    <div><div class="font-display font-extrabold text-4xl md:text-5xl text-emerald-600"><span data-count="15">0</span></div><p class="text-sm text-stone-500 mt-1">Years on the floor</p></div>
+    <div><div class="font-display font-extrabold text-4xl md:text-5xl text-sky-600"><span data-count="98">0</span>%</div><p class="text-sm text-stone-500 mt-1">On-time delivery</p></div>
+  </div>
+</section>
+
+<style>.svc-card:hover{box-shadow:0 22px 55px -18px var(--sg),0 4px 18px -8px var(--sg)}</style>
+<!-- ===================== SERVICES (icon-tile redesign, light theme) ===================== -->
+<section id="services" class="bg-paper py-24 md:py-28 relative">
+  <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle,rgba(0,0,0,.055) 1px,transparent 1px);background-size:28px 28px"></div>
+  <div class="max-w-[1240px] mx-auto px-6 relative">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14" data-reveal>
+      <div class="max-w-[680px]">
+        <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>What we do</span>
+        <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3.3rem] mt-5 mb-4">One workshop for <span class="text-brand">every car need</span></h2>
+        <p class="text-stone-500 text-[1.08rem]">Ten complete service families — from a routine oil change to dealer-level diagnostics and luxury bodywork.</p>
+      </div>
+      <div class="flex items-center gap-5 shrink-0 pb-1">
+        <div class="text-center"><span class="font-display font-extrabold text-3xl text-ink block leading-tight">10</span><span class="font-mono text-[.62rem] text-stone-400 tracking-widest uppercase">Services</span></div>
+        <div class="w-px h-10 bg-stone-200"></div>
+        <div class="text-center"><span class="font-display font-extrabold text-3xl text-ink block leading-tight">1</span><span class="font-mono text-[.62rem] text-stone-400 tracking-widest uppercase">Workshop</span></div>
+        <div class="w-px h-10 bg-stone-200"></div>
+        <div class="text-center"><span class="font-display font-extrabold text-3xl text-ink block leading-tight">All</span><span class="font-mono text-[.62rem] text-stone-400 tracking-widest uppercase">Brands</span></div>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-reveal>
+
+      <!-- 01 orange -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(251,146,60,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,service,garage?lock=101" alt="Multi-brand car service" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange-400 to-amber-300"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">01</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-orange-50 border border-orange-100 grid place-items-center text-orange-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8 7.2 20l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.6-.6-2.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-orange-400">SERVICE 01</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Multi-Brand &amp; General Service</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Periodic servicing, oil change, engine inspection &amp; general maintenance for any make.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Periodic servicing &amp; oil change</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Multi-brand &amp; all-make repairs</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Best multi-brand garage near me</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-orange-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 02 violet -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(167,139,250,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/luxury,car,bmw?lock=102" alt="Luxury car service" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-violet-400 to-purple-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">02</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-violet-50 border border-violet-100 grid place-items-center text-violet-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M3 8l4 3 5-6 5 6 4-3-2 11H5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-violet-400">SERVICE 02</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Premium &amp; Luxury Car Service</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Dealer-level tooling for Audi, BMW, Mercedes, Jaguar, Land Rover &amp; Volvo.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span>Audi, BMW &amp; Mercedes specialist</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span>Dealer-level diagnostics &amp; repair</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span>Jaguar, Land Rover &amp; Volvo care</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-violet-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 03 rose -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(251,113,133,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,paint,bodyshop?lock=103" alt="Denting and painting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-rose-400 to-pink-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">03</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-rose-50 border border-rose-100 grid place-items-center text-rose-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M9 8h7v12H9zM12 4h2M14 6h2M9 11h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-rose-400">SERVICE 03</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Denting, Painting &amp; Body Shop</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Scratch, panel &amp; accident repair with flawless full-body colour matching.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 shrink-0"></span>Scratch &amp; dent restoration</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 shrink-0"></span>Panel replacement &amp; alignment</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 shrink-0"></span>Full-body colour matching</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-rose-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 04 sky -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(56,189,248,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,detailing,ceramic?lock=104" alt="Ceramic coating and detailing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-sky-400 to-blue-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">04</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-sky-50 border border-sky-100 grid place-items-center text-sky-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 16v4M16 18h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-sky-400">SERVICE 04</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Detailing &amp; Ceramic Coating</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">3M-grade coatings, paint protection and full interior/exterior detailing.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>3M ceramic &amp; paint protection film</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Paint correction &amp; swirl removal</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Full interior &amp; exterior detailing</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-sky-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 05 emerald -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(52,211,153,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,interior,cleaning?lock=105" alt="Interior deep cleaning" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-400 to-teal-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">05</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 grid place-items-center text-emerald-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3M3 12a2 2 0 0 1 4 0v3h10v-3a2 2 0 0 1 4 0v6H3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-emerald-400">SERVICE 05</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Interior Deep Cleaning</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Seat shampooing, AC &amp; dashboard restoration, odour removal &amp; dry cleaning.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>Seat shampoo &amp; dry cleaning</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>AC &amp; dashboard restoration</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>Odour removal &amp; carpet cleaning</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-emerald-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 06 blue -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(96,165,250,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,diagnostic,computer?lock=106" alt="Diagnostics and electrical" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-400 to-indigo-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">06</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 grid place-items-center text-blue-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-blue-400">SERVICE 06</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Diagnostics &amp; Electrical</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Computer scanning, ECU diagnostics, sensor calibration &amp; wiring repairs.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>Dealer-grade ECU scanning</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>Sensor calibration &amp; repair</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>Car electrical &amp; wiring fix</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-blue-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 07 amber -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(251,191,36,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,key,remote?lock=107" alt="Key programming" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-amber-400 to-yellow-300"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">07</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-amber-50 border border-amber-100 grid place-items-center text-amber-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l8 8M16 16l2-2M18 18l2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-amber-500">SERVICE 07</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Key Programming</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Lost-key replacement, smart-key coding, duplicate keys &amp; immobiliser setup.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>Smart key coding &amp; replacement</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>Lost key duplication</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>Immobiliser &amp; remote setup</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-amber-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 08 teal -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(45,212,191,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,windshield,glass?lock=108" alt="Windshield and glass" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-teal-400 to-cyan-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">08</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 grid place-items-center text-teal-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M5 18l2-10h10l2 10zM7 8c2-1 8-1 10 0M9 8v10M15 8v10" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-teal-500">SERVICE 08</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Windshield &amp; Glass</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Windshield replacement, front-glass crack repair &amp; side-glass fitting.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>Windshield replacement</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>Front glass crack repair</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>Side-glass &amp; sunroof fitting</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-teal-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 09 red -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(248,113,113,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,battery,roadside?lock=109" alt="Battery and breakdown" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-400 to-rose-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">09</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-red-50 border border-red-100 grid place-items-center text-red-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M19 11h2v4h-2M7 6v2M14 6v2M9 13h4M11 11v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-red-400">SERVICE 09</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Battery &amp; Breakdown Assistance</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">New batteries, jump-starts &amp; 24×7 roadside rescue when you're stuck.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>New battery supply &amp; fitting</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>Jump-start &amp; roadside rescue</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>24×7 emergency breakdown</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-red-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 10 fuchsia -->
+      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(232,121,249,.22)">
+        <div class="relative h-44 overflow-hidden bg-stone-900">
+          <img src="https://loremflickr.com/520/300/car,seat,accessories?lock=110" alt="Seat covers and accessories" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
+          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-fuchsia-400 to-pink-400"></div>
+          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">10</span>
+        </div>
+        <div class="p-6 pt-5">
+          <div class="flex items-center gap-3 mb-3.5">
+            <div class="w-9 h-9 rounded-xl bg-fuchsia-50 border border-fuchsia-100 grid place-items-center text-fuchsia-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M6 4h6a3 3 0 0 1 3 3v7H8a2 2 0 0 1-2-2zM15 14h3l-1 6H9l-1-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-fuchsia-400">SERVICE 10</span>
+          </div>
+          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Seat Covers &amp; Accessories</h3>
+          <p class="text-sm text-stone-500 leading-relaxed mb-4">Custom seat covers, floor mats &amp; premium accessories, fitted in-house.</p>
+          <ul class="space-y-1.5 mb-5">
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 shrink-0"></span>Custom seat covers fitted in-house</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 shrink-0"></span>Premium floor mats &amp; protectors</li>
+            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 shrink-0"></span>Car accessories &amp; add-ons</li>
+          </ul>
+          <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-fuchsia-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- city banner -->
+    <div class="mt-6 rounded-2xl p-7 md:p-8 bg-gradient-to-r from-ink to-stone-800 text-white flex flex-col md:flex-row md:items-center justify-between gap-5" data-reveal>
+      <div class="flex items-center gap-4">
+        <span class="w-12 h-12 rounded-xl bg-brand grid place-items-center shrink-0"><svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <div><h3 class="font-display text-xl font-bold">Car service in <span class="text-brand">[Your City]</span></h3><p class="text-sm text-stone-300">Trusted multi-brand garage near you — free pickup &amp; drop.</p></div>
+      </div>
+      <a href="#book" class="inline-flex justify-center items-center px-7 py-3.5 rounded-full font-semibold text-ink bg-white hover:-translate-y-0.5 transition-transform whitespace-nowrap">Book in [Your City]</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BEFORE / AFTER ===================== -->
+<section id="showcase" class="bg-white py-24 md:py-28">
+  <div class="max-w-[1240px] mx-auto px-6">
+    <div class="max-w-[720px] mb-12" data-reveal>
+      <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>Before &amp; after</span>
+      <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3.3rem] mt-5 mb-4">The transformation <span class="text-brand">speaks for itself</span></h2>
+      <p class="text-stone-500 text-[1.08rem]">Drag the slider — from dull and damaged to showroom-fresh.</p>
+    </div>
+    <div id="baTabs" class="flex flex-wrap gap-2.5 mb-7" data-reveal>
+      <button data-k="0" class="ba-tab px-5 py-2.5 rounded-full text-sm font-semibold text-white bg-brand transition">Dent Repair</button>
+      <button data-k="1" class="ba-tab px-5 py-2.5 rounded-full text-sm font-semibold text-inksoft bg-paper border-[1.5px] border-stone-300 hover:border-brand hover:text-brand-deep transition">Full Body Paint</button>
+      <button data-k="2" class="ba-tab px-5 py-2.5 rounded-full text-sm font-semibold text-inksoft bg-paper border-[1.5px] border-stone-300 hover:border-brand hover:text-brand-deep transition">Ceramic Coating</button>
+      <button data-k="3" class="ba-tab px-5 py-2.5 rounded-full text-sm font-semibold text-inksoft bg-paper border-[1.5px] border-stone-300 hover:border-brand hover:text-brand-deep transition">Interior Cleaning</button>
+    </div>
+    <div id="baStage" class="relative rounded-[22px] overflow-hidden aspect-[16/8.4] select-none shadow-card bg-stone-900" data-reveal>
+      <div id="baBefore" class="absolute inset-0"><img alt="Before" class="w-full h-full object-cover grayscale brightness-[.62] contrast-[.92]" onerror="this.style.display='none'"><span class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40"></span></div>
+      <div id="baAfter" class="absolute inset-0" style="clip-path:inset(0 0 0 50%)"><img alt="After" class="w-full h-full object-cover saturate-[1.18] contrast-[1.05] brightness-[1.04]" onerror="this.style.display='none'"><span class="absolute top-0 left-0 w-3/5 h-full bg-gradient-to-br from-white/25 to-transparent pointer-events-none"></span></div>
+      <span class="absolute top-4 left-4 z-20 px-3.5 py-1.5 rounded-full font-mono text-[.66rem] font-bold tracking-wider uppercase text-white bg-ink/70 backdrop-blur">Before</span>
+      <span class="absolute top-4 right-4 z-20 px-3.5 py-1.5 rounded-full font-mono text-[.66rem] font-bold tracking-wider uppercase text-white bg-brand">After</span>
+      <div id="baHandle" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[3px] bg-white z-30">
+        <div id="baKnob" role="slider" aria-label="Reveal slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[52px] h-[52px] rounded-full bg-brand border-[3px] border-white grid place-items-center cursor-ew-resize shadow-lg text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M9 6 3 12l6 6M15 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>.process-card:hover{box-shadow:0 28px 70px -22px var(--glow),0 0 0 1px rgba(255,255,255,.11)}.process-card:hover .process-icon{box-shadow:0 0 26px var(--glow)}.process-progress{width:0;transition:none}.process-card:hover .process-progress{width:100%;transition:width .72s cubic-bezier(.4,0,.2,1)}</style>
+<!-- ===================== PROCESS (mission control redesign) ===================== -->
+<section id="process" class="bg-ink text-white pt-24 pb-32 md:pt-28 md:pb-36 relative overflow-hidden">
+  <!-- Diagonal micro-grid texture -->
+  <div class="absolute inset-0 pointer-events-none" style="background-image:repeating-linear-gradient(-45deg,rgba(255,255,255,.022) 0,rgba(255,255,255,.022) 1px,transparent 1px,transparent 36px)"></div>
+  <!-- Ambient glow orbs -->
+  <div class="absolute -top-40 -right-20 w-[680px] h-[680px] rounded-full bg-brand/10 blur-[140px] pointer-events-none"></div>
+  <div class="absolute bottom-0 -left-24 w-[520px] h-[520px] rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-[1240px] mx-auto px-6 relative">
+    <!-- Header -->
+    <div class="max-w-[780px] mb-14 lg:mb-16" data-reveal>
+      <div class="flex flex-wrap items-center gap-3 mb-5">
+        <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand bg-brand/15 border border-brand/40 px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>How it works</span>
+        <span class="inline-flex items-center gap-2 font-mono text-[.65rem] tracking-widest text-white/40"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>LIVE TRACKING</span>
+      </div>
+      <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3.3rem] mb-4">Six steps from <span class="text-brand">drop-off to delivery</span></h2>
+      <p class="text-white/55 text-[1.08rem]">A transparent journey you can track at every stage — no surprises, no hidden work.</p>
+    </div>
+
+    <!-- Desktop node-path strip -->
+    <div id="processNodes" class="hidden lg:flex items-start mb-12"></div>
+
+    <!-- Step cards: 3-col lg, 2-col sm, 1-col default -->
+    <div id="timeline" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY MARQUEE ===================== -->
+<section class="bg-white py-24 md:py-28 overflow-hidden group">
+  <div class="max-w-[1240px] mx-auto px-6 text-center mb-11" data-reveal>
+    <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>Inside the workshop</span>
+    <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3rem] mt-5">Where the <span class="text-brand">work happens</span></h2>
+  </div>
+  <div id="galTrack" class="flex gap-4 w-max animate-marquee2 group-hover:[animation-play-state:paused]"></div>
+</section>
+
+<!-- ===================== BRANDS ===================== -->
+<section id="brands" class="bg-paper2 py-24 md:py-28">
+  <div class="max-w-[1240px] mx-auto px-6">
+    <div class="text-center mb-11" data-reveal>
+      <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>Multi-brand expertise</span>
+      <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3rem] mt-5">Premium brands we <span class="text-brand">service daily</span></h2>
+    </div>
+    <div id="brandGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3.5" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section id="reviews" class="bg-paper py-24 md:py-28">
+  <div class="max-w-[1240px] mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12" data-reveal>
+      <div class="max-w-[640px]">
+        <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>Customer reviews</span>
+        <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3.3rem] mt-5 mb-3">Owners who came back <span class="text-brand">— and sent friends</span></h2>
+        <p class="inline-flex items-center gap-2 text-sm text-stone-500">
+          <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.6a4.8 4.8 0 0 1-2.1 3.1v2.6h3.4C20.8 18 22 15.4 22 12.2z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z"/><path fill="#FBBC05" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1a10 10 0 0 0 0 9z"/><path fill="#EA4335" d="M12 6c1.5 0 2.8.5 3.8 1.5l2.9-2.8A10 10 0 0 0 3.1 7.4l3.3 2.6C7.2 7.7 9.4 6 12 6z"/></svg>
+          Rated <span id="revRating" class="font-semibold text-ink">4.9</span> / 5 across <span id="revTotal" class="font-semibold text-ink">1,200+</span> Google reviews
+        </p>
+      </div>
+      <a href="https://search.google/local/writereview?placeid=YOUR_PLACE_ID" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm bg-white border border-stone-200 hover:border-brand hover:-translate-y-0.5 transition-all whitespace-nowrap shrink-0">
+        <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 20l1.2-6.5L2.5 8.9 9.1 8z"/></svg>Write a review
+      </a>
+    </div>
+    <div id="revGrid" class="grid md:grid-cols-3 gap-5" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section id="faq" class="bg-white py-24 md:py-28">
+  <div class="max-w-[1240px] mx-auto px-6">
+    <div class="text-center mb-11" data-reveal>
+      <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>Good to know</span>
+      <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3rem] mt-5">Frequently asked <span class="text-brand">questions</span></h2>
+    </div>
+    <div id="faqList" class="max-w-[840px] mx-auto" data-reveal></div>
+  </div>
+</section>
+
+<!-- ===================== SERVICE AREA (real Google map) ===================== -->
+<section id="area" class="bg-paper py-24 md:py-28">
+  <div class="max-w-[1240px] mx-auto px-6 grid lg:grid-cols-2 gap-11 items-center">
+    <div data-reveal>
+      <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>Service area</span>
+      <h2 class="font-display font-bold tracking-tight text-3xl md:text-[2.7rem] mt-4 mb-3.5">Car service in <span class="text-brand">[Your City]</span></h2>
+      <p class="text-inksoft mb-6">Looking for a <strong>multi brand car service near you</strong>? Our [Your City] workshop is the trusted choice for periodic servicing, denting &amp; painting, ceramic coating and luxury car repair — with <strong>free pickup &amp; drop</strong> across the areas below.</p>
+
+      <!-- Areas served: replace bracketed names with real localities you cover -->
+      <p class="text-xs font-mono uppercase tracking-wider text-stone-400 mb-3">Areas we serve &amp; pickup from</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-7">
+        <a href="#book" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm hover:border-brand hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4 text-brand shrink-0" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>[Locality 1]</a>
+        <a href="#book" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm hover:border-brand hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4 text-brand shrink-0" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>[Locality 2]</a>
+        <a href="#book" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm hover:border-brand hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4 text-brand shrink-0" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>[Locality 3]</a>
+        <a href="#book" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm hover:border-brand hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4 text-brand shrink-0" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>[Locality 4]</a>
+        <a href="#book" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm hover:border-brand hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4 text-brand shrink-0" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>[Locality 5]</a>
+        <a href="#book" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white border border-stone-200 text-sm hover:border-brand hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4 text-brand shrink-0" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>[Locality 6]</a>
+      </div>
+      <a href="https://maps.google.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white bg-brand hover:bg-brand-deep hover:-translate-y-0.5 transition-all shadow-lg shadow-brand/40">Get directions
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+
+    <!-- Real Google Map embed (no API key needed). Replace the q= value with your exact address. -->
+    <div class="relative rounded-[22px] overflow-hidden aspect-[4/3.4] border border-stone-200 shadow-card" data-reveal>
+      <iframe
+        title="AutoCraft Premium Car Care location"
+        class="absolute inset-0 w-full h-full"
+        style="border:0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=AutoCraft%20Premium%20Car%20Care%20%5BYour%20City%5D&t=&z=13&ie=UTF8&iwloc=&output=embed">
+      </iframe>
+      <div class="absolute left-4 bottom-4 z-10 px-4 py-3.5 rounded-2xl bg-white shadow-soft pointer-events-none">
+        <b class="font-display text-[.96rem] block">AutoCraft Premium Car Care</b>
+        <span class="text-sm text-stone-500">[Shop Address, Street, Your City] · Open till 8 PM</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="relative overflow-hidden text-white text-center px-6 py-24 md:py-28">
+  <div class="absolute inset-0 z-0 bg-gradient-to-br from-stone-700 to-stone-900">
+    <img src="https://loremflickr.com/1600/700/sportscar,garage?lock=55" alt="" aria-hidden="true" class="w-full h-full object-cover" onerror="this.style.display='none'">
+  </div>
+  <div class="absolute inset-0 z-10 bg-gradient-to-br from-brand-deep/90 to-ink/85"></div>
+  <div class="relative z-20 max-w-[680px] mx-auto" data-reveal>
+    <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-white bg-white/15 border border-white/40 px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-white rotate-45"></span>Ready when you are</span>
+    <h2 class="font-display font-bold tracking-tight text-[2.1rem] md:text-[3.5rem] mt-5 mb-4">Book your car service today</h2>
+    <p class="text-[1.14rem] opacity-95 mb-8">Get expert service, transparent pricing and guaranteed satisfaction — backed by a written warranty.</p>
+    <div class="flex flex-wrap gap-3.5 justify-center">
+      <a href="#book" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-ink bg-white hover:-translate-y-0.5 transition-transform">Book Service
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="#book" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white border-[1.5px] border-white/60 hover:bg-white/10 hover:-translate-y-0.5 transition-all">Get Free Quote</a>
+      <a href="tel:+919800000000" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-white border-[1.5px] border-white/60 hover:bg-white/10 hover:-translate-y-0.5 transition-all">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Call Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-ink text-stone-300 pt-[74px] pb-8">
+  <div class="max-w-[1240px] mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-10 mb-12">
+      <div>
+        <a href="#top" class="flex items-center gap-3 font-display font-extrabold text-[1.18rem] text-white">
+          <span class="w-10 h-10 rounded-xl grid place-items-center bg-brand"><svg class="w-[22px] h-[22px]" viewBox="0 0 24 24" fill="none"><path d="M3 13l2-5a3 3 0 0 1 2.8-2h8.4A3 3 0 0 1 19 8l2 5v5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" stroke="#fff" stroke-width="1.6"/><circle cx="7.5" cy="14.5" r="1.3" fill="#fff"/><circle cx="16.5" cy="14.5" r="1.3" fill="#fff"/></svg></span>
+          <span class="leading-none">AutoCraft<span class="block font-mono font-normal text-[.58rem] tracking-[.16em] text-brand uppercase mt-0.5">Premium Car Care</span></span>
+        </a>
+        <p class="my-5 text-sm text-stone-400 max-w-sm">Multi-brand car service &amp; auto body shop in [Your City]. Certified technicians, genuine parts and dealer-level diagnostics for everyday and luxury vehicles.</p>
+        <div class="flex gap-2.5">
+          <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-xl grid place-items-center border border-white/10 bg-white/5 hover:border-brand hover:bg-brand/15 hover:-translate-y-0.5 transition-all"><svg class="w-[19px] h-[19px] text-white" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-xl grid place-items-center border border-white/10 bg-white/5 hover:border-brand hover:bg-brand/15 hover:-translate-y-0.5 transition-all"><svg class="w-[19px] h-[19px] text-white" viewBox="0 0 24 24" fill="none"><path d="M14 8h2V5h-2a4 4 0 0 0-4 4v2H8v3h2v6h3v-6h2.5l.5-3H13V9a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></a>
+          <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-xl grid place-items-center border border-white/10 bg-white/5 hover:border-brand hover:bg-brand/15 hover:-translate-y-0.5 transition-all"><svg class="w-[19px] h-[19px] text-white" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M11 9.5v5l4-2.5z" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/919800000000" aria-label="WhatsApp" class="w-10 h-10 rounded-xl grid place-items-center border border-white/10 bg-white/5 hover:border-brand hover:bg-brand/15 hover:-translate-y-0.5 transition-all"><svg class="w-[19px] h-[19px] text-white" viewBox="0 0 24 24" fill="none"><path d="M3 21l1.6-4.5A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L3 21z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-mono text-[.72rem] tracking-[.16em] uppercase text-brand mb-5">Services</h5>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#services" class="hover:text-brand transition-colors">Periodic Car Service</a></li>
+          <li><a href="#services" class="hover:text-brand transition-colors">Denting &amp; Painting</a></li>
+          <li><a href="#services" class="hover:text-brand transition-colors">Ceramic Coating</a></li>
+          <li><a href="#services" class="hover:text-brand transition-colors">Car Diagnostics</a></li>
+          <li><a href="#services" class="hover:text-brand transition-colors">Key Programming</a></li>
+          <li><a href="#services" class="hover:text-brand transition-colors">Battery &amp; Breakdown</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-mono text-[.72rem] tracking-[.16em] uppercase text-brand mb-5">Working Hours</h5>
+        <ul class="space-y-2.5 text-sm">
+          <li>Mon – Sat · 9 AM – 8 PM</li>
+          <li>Sunday · 10 AM – 4 PM</li>
+          <li class="text-brand">Roadside help · 24×7</li>
+        </ul>
+        <h5 class="font-mono text-[.72rem] tracking-[.16em] uppercase text-brand mt-6 mb-5">Quick Links</h5>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#showcase" class="hover:text-brand transition-colors">Our Work</a></li>
+          <li><a href="#reviews" class="hover:text-brand transition-colors">Reviews</a></li>
+          <li><a href="#faq" class="hover:text-brand transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-mono text-[.72rem] tracking-[.16em] uppercase text-brand mb-5">Get in touch</h5>
+        <div class="flex gap-3 items-start mb-3.5 text-sm"><svg class="w-[17px] h-[17px] text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.6"/></svg>[Shop Address, Street, Your City]</div>
+        <div class="flex gap-3 items-start mb-3.5 text-sm"><svg class="w-[17px] h-[17px] text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" stroke="currentColor" stroke-width="1.6"/></svg><a href="tel:+919800000000" class="hover:text-brand transition-colors">+91 98000 00000</a></div>
+        <div class="flex gap-3 items-start mb-4 text-sm"><svg class="w-[17px] h-[17px] text-brand shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg><a href="mailto:hello@autocraft.example" class="hover:text-brand transition-colors">hello@autocraft.example</a></div>
+        <a href="https://wa.me/919800000000" class="inline-flex items-center gap-2.5 px-6 py-3 rounded-full font-semibold text-white bg-brand hover:bg-brand-deep hover:-translate-y-0.5 transition-all"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M3 21l1.6-4.5A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L3 21z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-wrap justify-between gap-4 text-[.82rem] font-mono text-stone-500">
+      <span>© 2026 AutoCraft Premium Car Care · Multi-brand car service &amp; auto body shop, [Your City].</span>
+      <span>Built for owners who expect dealer quality without dealer prices.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919800000000" aria-label="Chat on WhatsApp" class="fixed right-5 bottom-5 z-50 w-[60px] h-[60px] rounded-full bg-[#25d366] grid place-items-center shadow-xl shadow-[#25d366]/50 hover:scale-110 transition-transform">
+  <span class="absolute inset-0 rounded-full border-2 border-[#25d366] animate-ping"></span>
+  <svg class="w-8 h-8 relative" viewBox="0 0 24 24" fill="none"><path d="M3 21l1.6-4.5A8 8 0 1 1 12 20a8 8 0 0 1-4-1.1L3 21z" fill="#fff"/><path d="M8.5 9c-.3 0-.6.1-.8.4-.3.3-.9 1-.9 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.1 2.3.9 2.8.7 3.3.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.2-.3.2-.5.1-.7-.3-1.4-.5-2.2-1.3-.6-.6-1-1.3-1.2-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3.2-.5 0-.1 0-.3-.1-.4L9.7 9.3C9.5 8.9 9.3 9 9.1 9h-.6z" fill="#25d366"/></svg>
+</a>
+
+<script>
+  const $=s=>document.querySelector(s);
+  const FLK=(kw,w,h,lock)=>`https://loremflickr.com/${w}/${h}/${kw}?lock=${lock}`;
+  const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  /* ---- nav scroll state (transparent over hero -> solid on light body) ---- */
+  const nav=$('#nav');
+  function onScroll(){const s=scrollY>40;nav.classList.toggle('bg-paper/90',s);nav.classList.toggle('backdrop-blur-md',s);nav.classList.toggle('shadow-sm',s);nav.classList.toggle('text-ink',s);nav.classList.toggle('text-white',!s)}
+  onScroll();addEventListener('scroll',onScroll);
+
+  /* ---- mobile menu ---- */
+  const burger=$('#burger'),mm=$('#mobileMenu');
+  burger.addEventListener('click',()=>{const o=mm.classList.toggle('opacity-0');mm.classList.toggle('pointer-events-none');mm.classList.toggle('-translate-y-3');burger.setAttribute('aria-expanded',!o)});
+  mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.add('opacity-0','pointer-events-none','-translate-y-3');burger.setAttribute('aria-expanded',false)}));
+
+  /* ---- hero carousel ---- */
+  const slides=[...document.querySelectorAll('.hero-slide')],dots=$('#heroDots');
+  let hi=0;
+  dots.innerHTML=slides.map((_,i)=>`<button data-i="${i}" class="hd w-8 h-1.5 rounded-full transition-all ${i===0?'bg-brand w-10':'bg-white/40'}"></button>`).join('');
+  function goSlide(n){slides[hi].classList.replace('opacity-100','opacity-0');dots.children[hi].classList.replace('bg-brand','bg-white/40');dots.children[hi].classList.remove('w-10');
+    hi=(n+slides.length)%slides.length;
+    slides[hi].classList.replace('opacity-0','opacity-100');slides[hi].querySelector('img').classList.remove('animate-kenburns');void slides[hi].offsetWidth;slides[hi].querySelector('img').classList.add('animate-kenburns');
+    dots.children[hi].classList.replace('bg-white/40','bg-brand');dots.children[hi].classList.add('w-10')}
+  let heroTimer=setInterval(()=>goSlide(hi+1),5000);
+  dots.addEventListener('click',e=>{const b=e.target.closest('.hd');if(!b)return;clearInterval(heroTimer);goSlide(+b.dataset.i);heroTimer=setInterval(()=>goSlide(hi+1),5000)});
+
+  /* ---- booking form -> WhatsApp (repoint data-action to your backend to POST instead) ---- */
+  const WHATSAPP_NUMBER='919800000000';
+  $('#bookForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const f=e.target,g=n=>(f.querySelector(`[name="${n}"]`).value||'').trim();
+    const action=f.dataset.action;
+    if(action){f.action=action;f.method='post';f.submit();return;}
+    const msg=`Hi AutoCraft, I'd like to book a car service.\nName: ${g('name')}\nPhone: ${g('phone')}\nCar brand: ${g('brand')||'-'}\nService: ${g('service')||'-'}\nPreferred date: ${g('date')||'-'}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
+    $('#bookNote').textContent='Opening WhatsApp… we will confirm your slot shortly.';
+    $('#bookNote').className='text-center text-xs text-emerald-600 font-semibold';
+  });
+
+  /* ---- counters ---- */
+  function runCounter(el){const target=+el.dataset.count;let n=0;const step=Math.max(1,Math.round(target/45));const t=setInterval(()=>{n+=step;if(n>=target){n=target;clearInterval(t)}el.textContent=n},20)}
+
+  /* ---- gallery ---- */
+  const gallery=[['car,workshop',201,'Service Bay'],['car,paint',202,'Paint Booth'],['car,detailing',203,'Detailing'],['car,engine',204,'Diagnostics'],['car,wheel,alloy',205,'Alloy Care'],['car,interior',206,'Interior Spa']];
+  const gi=g=>`<div class="relative w-[340px] h-[230px] rounded-[18px] overflow-hidden shrink-0 bg-gradient-to-br from-stone-700 to-stone-900"><img src="${FLK(g[0],420,290,g[1])}" alt="${g[2]}" class="w-full h-full object-cover" onerror="this.style.display='none'"><span class="absolute left-3.5 bottom-3.5 font-mono text-[.7rem] font-bold text-white bg-ink/65 px-2.5 py-1 rounded-md backdrop-blur">${g[2]}</span></div>`;
+  $('#galTrack').innerHTML=gallery.map(gi).join('')+gallery.map(gi).join('');
+
+  /* ---- brands ---- */
+  const brands=['Audi','BMW','Mercedes-Benz','Toyota','Honda','Hyundai','Kia','Volkswagen','Skoda','Mahindra','Tata','Volvo','Jaguar','Land Rover'];
+  $('#brandGrid').innerHTML=brands.map(b=>`<div class="flex items-center gap-3 px-4 py-4 rounded-xl bg-white border border-stone-200 hover:border-brand hover:-translate-y-1 hover:shadow-soft transition-all"><span class="w-9 h-9 rounded-full border-[1.5px] border-brand grid place-items-center font-display font-extrabold text-sm text-brand-deep shrink-0">${b[0]}</span><div class="min-w-0"><span class="block font-display font-bold text-[.98rem] truncate">${b}</span><small class="block font-mono text-[.58rem] text-stone-400 tracking-wide">SERVICE · REPAIR</small></div></div>`).join('');
+
+  /* ---- process (icons + accent per step) ---- */
+  const stepIcon={search:'<circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.7"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',scan:'<rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M5 12h14" stroke="currentColor" stroke-width="1.7"/>',doc:'<path d="M7 3h7l4 4v14H7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 14 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>',wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8 7.2 20l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.6-.6-2.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>',shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.6"/><path d="m9 11 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>',key:'<circle cx="8" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l8 8M16 16l2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>'};
+  const steps=[['Inspection','Full visual & road-test check on arrival.','search','brand'],['Diagnosis','Dealer-level ECU scan finds every fault.','scan','blue-400'],['Approval','Itemised estimate — you approve first.','doc','violet-400'],['Repair','Certified techs, genuine parts.','wrench','rose-400'],['Quality Check','Multi-point QC and final road test.','shield','emerald-400'],['Delivery','Washed, ready, written warranty.','key','amber-400']];
+  const stepMeta={'brand':{a:'bg-brand',ib:'bg-brand/15',it:'text-brand',bt:'text-brand',bb:'border-brand/30',bg:'bg-brand/10',nd:'bg-brand',g:'rgba(253,123,43,.35)'},'blue-400':{a:'bg-blue-400',ib:'bg-blue-400/15',it:'text-blue-400',bt:'text-blue-400',bb:'border-blue-400/30',bg:'bg-blue-400/10',nd:'bg-blue-400',g:'rgba(96,165,250,.3)'},'violet-400':{a:'bg-violet-400',ib:'bg-violet-400/15',it:'text-violet-400',bt:'text-violet-400',bb:'border-violet-400/30',bg:'bg-violet-400/10',nd:'bg-violet-400',g:'rgba(167,139,250,.3)'},'rose-400':{a:'bg-rose-400',ib:'bg-rose-400/15',it:'text-rose-400',bt:'text-rose-400',bb:'border-rose-400/30',bg:'bg-rose-400/10',nd:'bg-rose-400',g:'rgba(251,113,133,.3)'},'emerald-400':{a:'bg-emerald-400',ib:'bg-emerald-400/15',it:'text-emerald-400',bt:'text-emerald-400',bb:'border-emerald-400/30',bg:'bg-emerald-400/10',nd:'bg-emerald-400',g:'rgba(52,211,153,.3)'},'amber-400':{a:'bg-amber-400',ib:'bg-amber-400/15',it:'text-amber-400',bt:'text-amber-400',bb:'border-amber-400/30',bg:'bg-amber-400/10',nd:'bg-amber-400',g:'rgba(251,191,36,.3)'}};
+  $('#timeline').innerHTML=steps.map((s,i)=>{const m=stepMeta[s[3]],n=String(i+1).padStart(2,'0');return`<div class="process-card group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2"style="--glow:${m.g}"><div class="h-[3px] w-full ${m.a} opacity-90"></div><div class="p-6"><div class="flex items-start justify-between mb-5"><span class="font-mono text-[.6rem] font-bold tracking-[.1em] uppercase border px-2.5 py-1 rounded-md leading-tight ${m.bt} ${m.bb} ${m.bg}">STEP ${n}</span><span class="font-display font-extrabold text-5xl text-white/10 leading-none select-none">${n}</span></div><div class="process-icon w-14 h-14 rounded-2xl ${m.ib} ${m.it} grid place-items-center mb-6 transition-shadow duration-300"><svg class="w-7 h-7"viewBox="0 0 24 24"fill="none">${stepIcon[s[2]]}</svg></div><h4 class="font-display font-bold text-[1.1rem] text-white mb-2">${s[0]}</h4><p class="text-sm text-white/50 leading-relaxed">${s[1]}</p><div class="mt-5 relative h-px bg-white/10 overflow-hidden"><span class="process-progress absolute left-0 top-0 h-full ${m.a} opacity-70"></span></div></div></div>`}).join('');
+  $('#processNodes').innerHTML=steps.map((s,i)=>{const m=stepMeta[s[3]],n=String(i+1).padStart(2,'0'),last=i===steps.length-1;return`<div class="flex items-start ${last?'':'flex-1'}"><div class="flex flex-col items-center gap-2 shrink-0"><div class="relative w-10 h-10 rounded-full bg-white/5 border border-white/15 grid place-items-center"><span class="font-mono text-[.7rem] font-bold text-white/60">${n}</span><span class="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full ${m.nd} border-2 border-ink"></span></div><span class="font-mono text-[.58rem] text-white/35 text-center leading-tight max-w-[72px] mt-1">${s[0].toUpperCase()}</span></div>${last?'':`<div class="flex-1 mt-5 mx-2 h-px"style="background:repeating-linear-gradient(90deg,rgba(255,255,255,.15) 0 5px,transparent 5px 11px)"></div>`}</div>`}).join('');
+
+  /* ---- reviews (live Google via reviews.php, curated fallback) ---- */
+  const REVIEWS_ENDPOINT='reviews.php';
+  const fallbackReviews=[
+    {name:'Rahul Mehta',sub:'BMW 3 Series · Service',rating:5,lock:301,text:'Took my BMW here after a frustrating dealer experience. Honest diagnosis, fair price and they actually explained what was wrong. Runs like new.'},
+    {name:'Anita Sharma',sub:'Hyundai Creta · Detailing',rating:5,lock:302,text:'The ceramic coating is stunning — water just rolls off now. Spotless interior deep clean too. Worth every rupee.'},
+    {name:'Karan Singh',sub:'Audi Q5 · Denting & Paint',rating:5,lock:303,text:'A bad parking dent looked impossible to fix. You genuinely cannot tell it ever happened. Colour match is perfect.'},
+    {name:'Priya Nair',sub:'Honda City · Periodic Service',rating:5,lock:304,text:'Free pickup and drop, transparent bill, and they sent photos of the work. This is how a workshop should run.'},
+    {name:'Vikram Patel',sub:'Mercedes GLC · Diagnostics',rating:4,lock:305,text:'A warning light three other garages could not crack — sorted in one visit with proper scanning tools.'},
+    {name:'Sneha Reddy',sub:'Kia Seltos · Battery & Key',rating:5,lock:306,text:'Battery died on a Sunday, roadside team reached in 30 minutes and reprogrammed my smart key. Lifesavers.'},
+  ];
+  function starsFor(n){n=Math.round(n||5);let s='';for(let i=0;i<5;i++)s+=`<svg class="w-[17px] h-[17px] ${i<n?'text-amber-400':'text-stone-300'}" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.8 6.1 20l1.2-6.5L2.5 8.9 9.1 8z"/></svg>`;return s}
+  function reviewCard(r){
+    const initial=(r.name||'?').charAt(0).replace(/['"\\]/g,'');
+    const src=r.photo?r.photo:(r.lock?FLK('face,portrait',96,96,r.lock):'');
+    const avatar=src?`<img src="${src}" alt="${esc(r.name)}" referrerpolicy="no-referrer" class="w-full h-full object-cover" onerror="this.replaceWith(document.createTextNode('${initial}'))">`:initial;
+    return `<article class="relative bg-white rounded-2xl border border-stone-200 p-7 hover:-translate-y-1.5 hover:shadow-card transition-all"><span class="absolute top-5 right-6 font-display text-5xl text-brand-soft leading-none">&rdquo;</span><div class="flex gap-1 mb-3.5">${starsFor(r.rating)}</div><p class="text-[.95rem] text-inksoft mb-5 line-clamp-6">${esc(r.text)}</p><div class="flex items-center gap-3"><div class="w-12 h-12 rounded-full overflow-hidden bg-brand grid place-items-center font-display font-bold text-white shrink-0">${avatar}</div><div><b class="block text-[.92rem]">${esc(r.name)}</b><small class="font-mono text-[.78rem] text-stone-500">${esc(r.sub)}</small></div></div></article>`;
+  }
+  const renderReviews=list=>{$('#revGrid').innerHTML=list.map(reviewCard).join('')};
+  renderReviews(fallbackReviews);
+  fetch(REVIEWS_ENDPOINT,{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+    if(d&&d.ok&&Array.isArray(d.reviews)&&d.reviews.length){
+      renderReviews(d.reviews.map(x=>({name:x.author,sub:(x.time?x.time+' · ':'')+'Google',text:x.text,rating:x.rating,photo:x.photo})));
+      if(d.rating)$('#revRating').textContent=Number(d.rating).toFixed(1);
+      if(d.total)$('#revTotal').textContent=Number(d.total).toLocaleString();
+    }
+  }).catch(()=>{});
+
+  /* ---- faq ---- */
+  const faqs=[['How much does periodic servicing cost?','Every job starts with a clear, itemised estimate you approve before we begin — no surprises. Share your car details for an exact quote.'],['What is ceramic coating?','A liquid polymer that bonds to your paint, adding a hard, glossy, hydrophobic layer that protects against UV, scratches and grime and keeps your car showroom-fresh for years.'],['Do you use genuine parts?','Yes. We use genuine or OEM-grade parts as standard and tell you upfront which is being fitted.'],['How long does denting and painting take?','A single panel scratch or dent is often same-day. Full-body paint typically takes 2–5 days. We give a firm timeline at approval.'],['Do you service luxury cars?','Absolutely — dealer-level tooling and specialists for Audi, BMW, Mercedes, Jaguar, Land Rover, Volvo and more, at workshop prices.'],['Do you provide pickup & drop?','Yes, free pickup and drop across [Your City] and nearby areas, plus 24×7 roadside and breakdown assistance.']];
+  $('#faqList').innerHTML=faqs.map(f=>`<div class="qa bg-white border border-stone-200 rounded-2xl mb-3 overflow-hidden transition-all"><button class="w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-display font-bold text-[1.04rem]">${f[0]}<span class="ico w-8 h-8 rounded-lg bg-brand-soft grid place-items-center shrink-0 transition-transform"><svg class="w-4 h-4 text-brand-deep" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button><div class="qa-body max-h-0 overflow-hidden transition-all duration-300"><p class="px-6 pb-5 text-[.95rem] text-stone-500">${f[1]}</p></div></div>`).join('');
+  $('#faqList').addEventListener('click',e=>{const btn=e.target.closest('button');if(!btn)return;const qa=btn.parentElement,body=qa.querySelector('.qa-body'),ico=qa.querySelector('.ico'),open=qa.classList.contains('isopen');
+    document.querySelectorAll('.qa').forEach(o=>{o.classList.remove('isopen','border-brand','shadow-soft');o.querySelector('.qa-body').style.maxHeight=null;o.querySelector('.ico').classList.remove('rotate-45','bg-brand');o.querySelector('.ico svg').classList.remove('text-white');o.querySelector('.ico svg').classList.add('text-brand-deep')});
+    if(!open){qa.classList.add('isopen','border-brand','shadow-soft');body.style.maxHeight=body.scrollHeight+'px';ico.classList.add('rotate-45','bg-brand');ico.querySelector('svg').classList.remove('text-brand-deep');ico.querySelector('svg').classList.add('text-white')}});
+
+  /* ---- before / after ---- */
+  const baCats=[['car,dent',401],['car,paint',402],['sportscar,shiny',403],['car,interior',404]];
+  const beforeImg=$('#baBefore img'),afterImg=$('#baAfter img');
+  function loadBA(i){const url=FLK(baCats[i][0],900,470,baCats[i][1]);beforeImg.src=url;afterImg.src=url}
+  loadBA(0);
+  $('#baTabs').addEventListener('click',e=>{const t=e.target.closest('.ba-tab');if(!t)return;
+    document.querySelectorAll('.ba-tab').forEach(x=>{x.classList.remove('text-white','bg-brand');x.classList.add('text-inksoft','bg-paper','border-[1.5px]','border-stone-300')});
+    t.classList.add('text-white','bg-brand');t.classList.remove('text-inksoft','bg-paper','border-[1.5px]','border-stone-300');loadBA(+t.dataset.k);setSplit(50)});
+  const stage=$('#baStage'),afterEl=$('#baAfter'),handle=$('#baHandle'),knob=$('#baKnob');
+  function setSplit(p){p=Math.max(0,Math.min(100,p));afterEl.style.clipPath=`inset(0 0 0 ${p}%)`;handle.style.left=p+'%';knob.setAttribute('aria-valuenow',Math.round(p))}
+  let dragging=false;
+  function moveFromEvent(x){const r=stage.getBoundingClientRect();setSplit(((x-r.left)/r.width)*100)}
+  knob.addEventListener('pointerdown',()=>dragging=true);addEventListener('pointerup',()=>dragging=false);
+  addEventListener('pointermove',e=>{if(dragging)moveFromEvent(e.clientX)});
+  stage.addEventListener('click',e=>{if(e.target.closest('#baKnob'))return;moveFromEvent(e.clientX)});
+  knob.addEventListener('keydown',e=>{const c=+knob.getAttribute('aria-valuenow');if(e.key==='ArrowLeft'){setSplit(c-4);e.preventDefault()}if(e.key==='ArrowRight'){setSplit(c+4);e.preventDefault()}});
+
+  /* ---- scroll reveal + counters ---- */
+  document.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('opacity-0','translate-y-8','transition-all','duration-700','ease-out'));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.remove('opacity-0','translate-y-8');en.target.querySelectorAll&&en.target.querySelectorAll('[data-count]').forEach(runCounter);io.unobserve(en.target)}}),{threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
