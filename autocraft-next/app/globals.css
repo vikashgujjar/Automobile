@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f6f5f1;
+  --color-paper-2: #efece4;
+  --color-ink: #121217;
+  --color-inksoft: #3c3c46;
+  --color-brand: #fd7b2b;
+  --color-brand-deep: #e85d10;
+  --color-brand-soft: #fff3ea;
+
+  --font-display: "Outfit", ui-sans-serif, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+
+  --shadow-card: 0 24px 60px -28px rgba(40,28,16,.34);
+  --shadow-soft: 0 12px 30px -16px rgba(40,28,16,.26);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee2: marquee2 34s linear infinite;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-bob: bob 2.6s ease-in-out infinite;
+  --animate-kenburns: kenburns 9s ease-out forwards;
+  --animate-cardrive: cardrive 7s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @keyframes marquee2 {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+  }
+  @keyframes bob {
+    0%, 100% { transform: rotate(-45deg) translateY(0); }
+    50%       { transform: rotate(-45deg) translateY(-8px); }
+  }
+  @keyframes kenburns {
+    from { transform: scale(1); }
+    to   { transform: scale(1.14); }
+  }
+  @keyframes cardrive {
+    from { left: -6%; }
+    to   { left: 104%; }
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: white;
+}
