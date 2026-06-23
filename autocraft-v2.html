@@ -271,12 +271,17 @@
   </div>
 </section>
 
-<style>.svc-card:hover{box-shadow:0 22px 55px -18px var(--sg),0 4px 18px -8px var(--sg)}</style>
+<style>
+.svc2-card{transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s}
+.svc2-card:hover{transform:translateY(-7px);box-shadow:0 24px 60px -16px rgba(0,0,0,.13)}
+.svc2-img{transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.svc2-card:hover .svc2-img{transform:scale(1.08)}
+</style>
 <!-- ===================== SERVICES (icon-tile redesign, light theme) ===================== -->
-<section id="services" class="bg-paper py-24 md:py-28 relative">
-  <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle,rgba(0,0,0,.055) 1px,transparent 1px);background-size:28px 28px"></div>
+<section id="services" class="bg-[#fafaf9] py-24 md:py-28 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background-image:radial-gradient(circle,rgba(0,0,0,.038) 1px,transparent 1px);background-size:30px 30px"></div>
   <div class="max-w-[1240px] mx-auto px-6 relative">
-    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14" data-reveal>
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16" data-reveal>
       <div class="max-w-[680px]">
         <span class="inline-flex items-center gap-2 font-mono text-[.7rem] font-bold tracking-[.14em] uppercase text-brand-deep bg-brand-soft border border-dashed border-brand px-3.5 py-1.5 rounded-lg"><span class="w-1.5 h-1.5 rounded-sm bg-brand rotate-45"></span>What we do</span>
         <h2 class="font-display font-bold tracking-tight text-4xl md:text-[3.3rem] mt-5 mb-4">One workshop for <span class="text-brand">every car need</span></h2>
@@ -291,355 +296,382 @@
       </div>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-reveal>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal>
 
-      <!-- 01 cyan -->
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(34,211,238,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,wash,foam?lock=101" alt="Car Wash and Detailing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-cyan-400 to-sky-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">01</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-100 grid place-items-center text-cyan-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M5 12c0-1 1.5-4 7-4s7 3 7 4M8 16c1 1 6 1 8 0M12 4v2M8 5l1 1.5M16 5l-1 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-cyan-500">SERVICE 01</span>
+      <!-- 01 cyan — Car Wash -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-cyan-100 to-cyan-50">
+          <img src="https://loremflickr.com/520/300/car,wash,foam?lock=101" alt="Car Wash" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-cyan-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-cyan-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-cyan-300/70 select-none pointer-events-none">01</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-cyan-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-cyan-200">Service 01</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-cyan-200 shadow-lg grid place-items-center text-cyan-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M5 12c0-1 1.5-4 7-4s7 3 7 4M8 16c1 1 6 1 8 0M12 4v2M8 5l1 1.5M16 5l-1 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Wash &amp; Detailing</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Thorough exterior cleaning, foam wash, tyre &amp; rim cleaning, hand dry and window wipe to keep your car spotless.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0"></span>Exterior foam wash &amp; rinse</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0"></span>Tyre &amp; rim cleaning</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0"></span>Hand dry &amp; window wipe</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Wash &amp; Detailing</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Thorough exterior cleaning, foam wash, tyre &amp; rim cleaning, hand dry and window wipe to keep your car spotless.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-cyan-100 border border-cyan-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-cyan-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Exterior foam wash &amp; rinse</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-cyan-100 border border-cyan-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-cyan-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tyre &amp; rim cleaning</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-cyan-100 border border-cyan-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-cyan-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hand dry &amp; window wipe</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-cyan-500">&#x20B9;250 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-cyan-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-cyan-600">&#x20B9;250</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-cyan-500 hover:bg-cyan-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(251,113,133,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,paint,bodyshop?lock=102" alt="Car Denting and Painting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-rose-400 to-pink-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">02</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-rose-50 border border-rose-100 grid place-items-center text-rose-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M9 8h7v12H9zM12 4h2M14 6h2M9 11h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-rose-400">SERVICE 02</span>
+      <!-- 02 rose — Car Denting -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-rose-100 to-rose-50">
+          <img src="https://loremflickr.com/520/300/car,paint,bodyshop?lock=102" alt="Car Denting" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-rose-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-rose-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-rose-300/70 select-none pointer-events-none">02</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-rose-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-rose-200">Service 02</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-rose-200 shadow-lg grid place-items-center text-rose-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M19 3H9v12h10zM12 6h2M9 11h10M3 20c0-1.1.9-2 2-2h3v3H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Denting &amp; Painting</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Scratch removal, panel repair &amp; full-body colour-matched painting to restore your car to its original look.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 shrink-0"></span>Scratch &amp; dent restoration</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 shrink-0"></span>Panel replacement &amp; alignment</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-rose-400 shrink-0"></span>Full-body colour matching</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Denting &amp; Painting</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Scratch removal, panel repair &amp; full-body colour-matched painting to restore your car to its original look.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-rose-100 border border-rose-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-rose-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Scratch &amp; dent restoration</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-rose-100 border border-rose-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-rose-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Panel replacement &amp; alignment</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-rose-100 border border-rose-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-rose-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full-body colour matching</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-rose-500">&#x20B9;1,000 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-rose-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-rose-600">&#x20B9;1,000</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-rose-500 hover:bg-rose-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(248,113,113,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,battery,roadside?lock=103" alt="Car Battery Repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-red-400 to-rose-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">03</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-red-50 border border-red-100 grid place-items-center text-red-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M19 11h2v4h-2M7 6v2M14 6v2M9 13h4M11 11v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-red-400">SERVICE 03</span>
+      <!-- 03 red — Battery -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-red-100 to-red-50">
+          <img src="https://loremflickr.com/520/300/car,battery,roadside?lock=103" alt="Car Battery" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-red-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-red-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-red-300/70 select-none pointer-events-none">03</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-red-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-red-200">Service 03</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-red-200 shadow-lg grid place-items-center text-red-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="8" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M19 11h2v4h-2M7 6v2M14 6v2M9 13h4M11 11v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Battery Repair &amp; Replacement</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">New battery supply, fitting &amp; testing to ensure reliable starting power and prevent unexpected breakdowns.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>Battery health check &amp; testing</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>New battery supply &amp; fitting</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>Jump-start &amp; emergency rescue</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Battery Repair &amp; Replacement</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">New battery supply, fitting &amp; testing to ensure reliable starting power and prevent unexpected breakdowns.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-red-100 border border-red-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-red-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Battery health check &amp; testing</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-red-100 border border-red-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-red-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>New battery supply &amp; fitting</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-red-100 border border-red-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-red-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jump-start &amp; emergency rescue</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-red-500">&#x20B9;300 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-red-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-red-600">&#x20B9;300</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-red-500 hover:bg-red-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(251,146,60,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,mechanic,repair?lock=104" alt="Car Mechanical Repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange-400 to-amber-300"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">04</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-orange-50 border border-orange-100 grid place-items-center text-orange-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8 7.2 20l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.6-.6-2.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-orange-400">SERVICE 04</span>
+      <!-- 04 orange — Mechanical -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-orange-100 to-orange-50">
+          <img src="https://loremflickr.com/520/300/car,mechanic,repair?lock=104" alt="Mechanical" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-orange-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-orange-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-orange-300/70 select-none pointer-events-none">04</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-orange-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-orange-200">Service 04</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-orange-200 shadow-lg grid place-items-center text-orange-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8 7.2 20l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.6-.6-2.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Mechanical Repair Services</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Complete mechanical repairs covering engine, brakes, transmission &amp; all moving parts for any car make.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Engine &amp; transmission repair</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>Brake system inspection &amp; fix</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0"></span>All mechanical components serviced</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Mechanical Repair Services</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Complete mechanical repairs covering engine, brakes, transmission &amp; all moving parts for any car make.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-orange-100 border border-orange-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-orange-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Engine &amp; transmission repair</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-orange-100 border border-orange-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-orange-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Brake system inspection &amp; fix</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-orange-100 border border-orange-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-orange-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>All mechanical components serviced</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-orange-500">&#x20B9;499 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-orange-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-orange-600">&#x20B9;499</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(99,102,241,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,ac,aircon?lock=105" alt="Car AC Repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-indigo-400 to-violet-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">05</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-100 grid place-items-center text-indigo-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M12 2a7 7 0 0 1 7 7c0 3-2 5.5-4 7l-3 2-3-2c-2-1.5-4-4-4-7a7 7 0 0 1 7-7z" stroke="currentColor" stroke-width="1.6"/><path d="M12 9v3l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-indigo-400">SERVICE 05</span>
+      <!-- 05 indigo — AC -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-indigo-100 to-indigo-50">
+          <img src="https://loremflickr.com/520/300/car,ac,aircon?lock=105" alt="Car AC" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-indigo-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-indigo-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-indigo-300/70 select-none pointer-events-none">05</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-indigo-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-indigo-200">Service 05</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-indigo-200 shadow-lg grid place-items-center text-indigo-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car AC Repair &amp; Gas Refilling</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Full AC service including refrigerant refill, compressor check &amp; cooling performance restoration for comfortable driving.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>AC gas refill &amp; leak detection</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Compressor &amp; condenser service</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0"></span>Cooling performance test</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car AC Repair &amp; Gas Refilling</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Full AC service including refrigerant refill, compressor check &amp; cooling performance restoration for comfortable driving.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-indigo-100 border border-indigo-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-indigo-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>AC gas refill &amp; leak detection</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-indigo-100 border border-indigo-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-indigo-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Compressor &amp; condenser service</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-indigo-100 border border-indigo-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-indigo-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cooling performance test</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-indigo-500">&#x20B9;1,000 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-indigo-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-indigo-600">&#x20B9;1,000</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-indigo-500 hover:bg-indigo-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(167,139,250,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,clutch,engine?lock=106" alt="Clutch and Body Parts" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-violet-400 to-purple-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">06</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-violet-50 border border-violet-100 grid place-items-center text-violet-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M3 8l4 3 5-6 5 6 4-3-2 11H5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-violet-400">SERVICE 06</span>
+      <!-- 06 violet — Clutch -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-violet-100 to-violet-50">
+          <img src="https://loremflickr.com/520/300/car,clutch,engine?lock=106" alt="Clutch" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-violet-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-violet-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-violet-300/70 select-none pointer-events-none">06</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-violet-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-violet-200">Service 06</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-violet-200 shadow-lg grid place-items-center text-violet-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Clutch &amp; Auto Body Parts Repair</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Clutch plate, pressure plate &amp; body panel replacement with genuine parts and expert fitment.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span>Clutch plate &amp; pressure plate</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span>Body panel replacement</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-violet-400 shrink-0"></span>Genuine parts &amp; quality fitting</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Clutch &amp; Auto Body Parts Repair</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Clutch plate, pressure plate &amp; body panel replacement with genuine parts and expert fitment.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-violet-100 border border-violet-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-violet-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Clutch plate &amp; pressure plate</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-violet-100 border border-violet-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-violet-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Body panel replacement</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-violet-100 border border-violet-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-violet-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Genuine parts &amp; quality fitting</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-violet-500">&#x20B9;300 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-violet-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-violet-600">&#x20B9;300</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-violet-500 hover:bg-violet-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(251,191,36,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,headlight,electrical?lock=107" alt="Car Lights and Fittings" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-amber-400 to-yellow-300"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">07</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-amber-50 border border-amber-100 grid place-items-center text-amber-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-amber-500">SERVICE 07</span>
+      <!-- 07 amber — Lights -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-amber-100 to-amber-50">
+          <img src="https://loremflickr.com/520/300/car,headlight,electrical?lock=107" alt="Car Lights" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-amber-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-amber-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-amber-300/70 select-none pointer-events-none">07</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-amber-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-amber-200">Service 07</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-amber-200 shadow-lg grid place-items-center text-amber-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Lights &amp; Electrical Fittings</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Headlight, taillight, indicator &amp; full electrical system repair and fitting for all car models.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>Headlight &amp; taillight fitting</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>Indicator &amp; fog lamp repair</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0"></span>Full electrical wiring check</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Lights &amp; Electrical Fittings</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Headlight, taillight, indicator &amp; full electrical system repair and fitting for all car models.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-amber-100 border border-amber-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-amber-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Headlight &amp; taillight fitting</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-amber-100 border border-amber-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-amber-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Indicator &amp; fog lamp repair</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-amber-100 border border-amber-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-amber-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full electrical wiring check</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-amber-500">&#x20B9;300 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-amber-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-amber-600">&#x20B9;300</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-amber-500 hover:bg-amber-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(52,211,153,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,service,garage?lock=108" alt="Periodic Car Servicing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-400 to-teal-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">08</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100 grid place-items-center text-emerald-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3M3 12a2 2 0 0 1 4 0v3h10v-3a2 2 0 0 1 4 0v6H3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-emerald-400">SERVICE 08</span>
+      <!-- 08 emerald — Periodic -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-emerald-100 to-emerald-50">
+          <img src="https://loremflickr.com/520/300/car,service,garage?lock=108" alt="Periodic Servicing" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-emerald-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-emerald-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-emerald-300/70 select-none pointer-events-none">08</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-emerald-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-emerald-200">Service 08</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-emerald-200 shadow-lg grid place-items-center text-emerald-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M8 15h.01M12 15h.01M16 15h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Periodic Car Servicing</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Scheduled oil change, filter replacement, fluid top-up &amp; multi-point inspection to keep your car running perfectly.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>Engine oil &amp; filter change</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>Fluid top-up &amp; brake check</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0"></span>Multi-point inspection report</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Periodic Car Servicing</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Scheduled oil change, filter replacement, fluid top-up &amp; multi-point inspection to keep your car running perfectly.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-emerald-100 border border-emerald-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Engine oil &amp; filter change</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-emerald-100 border border-emerald-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Fluid top-up &amp; brake check</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-emerald-100 border border-emerald-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Multi-point inspection report</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-emerald-500">&#x20B9;1,000 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-emerald-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-emerald-600">&#x20B9;1,000</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(45,212,191,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,suspension,wheel?lock=109" alt="Suspension and Fitment" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-teal-400 to-cyan-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">09</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 grid place-items-center text-teal-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M5 18l2-10h10l2 10zM7 8c2-1 8-1 10 0M9 8v10M15 8v10" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-teal-500">SERVICE 09</span>
+      <!-- 09 teal — Suspension -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-teal-100 to-teal-50">
+          <img src="https://loremflickr.com/520/300/car,suspension,wheel?lock=109" alt="Suspension" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-teal-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-teal-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-teal-300/70 select-none pointer-events-none">09</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-teal-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-teal-200">Service 09</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-teal-200 shadow-lg grid place-items-center text-teal-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M2 18h3M15 18h2M19 18h3M5 18V9M8 9H4M19 18V9M16 9h4M8 9l4-5 4 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Suspension &amp; Fitment Services</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Shock absorber, spring &amp; wheel alignment services for a smooth, stable and safe driving experience.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>Shock absorber replacement</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>Wheel alignment &amp; tracking</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-teal-400 shrink-0"></span>Spring &amp; bushings inspection</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Suspension &amp; Fitment Services</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Shock absorber, spring &amp; wheel alignment services for a smooth, stable and safe driving experience.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-teal-100 border border-teal-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-teal-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Shock absorber replacement</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-teal-100 border border-teal-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-teal-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wheel alignment &amp; tracking</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-teal-100 border border-teal-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-teal-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Spring &amp; bushings inspection</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-teal-500">&#x20B9;500 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-teal-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-teal-600">&#x20B9;500</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-teal-500 hover:bg-teal-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(96,165,250,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,tyre,wheel?lock=110" alt="Tyre and Wheel" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-400 to-indigo-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">10</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-100 grid place-items-center text-blue-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="17" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="17" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M10 17h4M3 17V9l4-4h8l4 4v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-blue-400">SERVICE 10</span>
+      <!-- 10 blue — Tyre -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+          <img src="https://loremflickr.com/520/300/car,tyre,wheel?lock=110" alt="Tyre" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-blue-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-blue-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-blue-300/70 select-none pointer-events-none">10</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-blue-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-blue-200">Service 10</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-blue-200 shadow-lg grid place-items-center text-blue-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Tyre Replacement &amp; Wheel Balancing</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">New tyre fitting, wheel balancing &amp; alignment for optimal grip, even wear and maximum road safety.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>New tyre supply &amp; fitting</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>Wheel balancing &amp; alignment</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>Tyre pressure &amp; tread check</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Tyre Replacement &amp; Wheel Balancing</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">New tyre fitting, wheel balancing &amp; alignment for optimal grip, even wear and maximum road safety.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-blue-100 border border-blue-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-blue-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>New tyre supply &amp; fitting</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-blue-100 border border-blue-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-blue-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wheel balancing &amp; alignment</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-blue-100 border border-blue-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-blue-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tyre pressure &amp; tread check</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-blue-500">&#x20B9;300 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-blue-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-blue-600">&#x20B9;300</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-blue-500 hover:bg-blue-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(56,189,248,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,polish,wax?lock=111" alt="Car Polishing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-sky-400 to-blue-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">11</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-sky-50 border border-sky-100 grid place-items-center text-sky-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 16v4M16 18h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-sky-400">SERVICE 11</span>
+      <!-- 11 sky — Polishing -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-sky-100 to-sky-50">
+          <img src="https://loremflickr.com/520/300/car,polish,wax?lock=111" alt="Car Polishing" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-sky-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-sky-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-sky-300/70 select-none pointer-events-none">11</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-sky-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-sky-200">Service 11</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-sky-200 shadow-lg grid place-items-center text-sky-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M18 16v4M16 18h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Polishing &amp; Paint Protection</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Machine polishing, scratch &amp; swirl removal and protective coating for a lasting showroom shine.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Machine polishing &amp; buffing</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Scratch &amp; swirl removal</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-sky-400 shrink-0"></span>Paint protection coating</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Polishing &amp; Paint Protection</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Machine polishing, scratch &amp; swirl removal and protective coating for a lasting showroom shine.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-sky-100 border border-sky-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-sky-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Machine polishing &amp; buffing</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-sky-100 border border-sky-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-sky-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Scratch &amp; swirl removal</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-sky-100 border border-sky-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-sky-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Paint protection coating</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-sky-500">&#x20B9;300 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-sky-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-sky-600">&#x20B9;300</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-sky-500 hover:bg-sky-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(232,121,249,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,diagnostic,computer?lock=112" alt="Vehicle Inspection" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-fuchsia-400 to-pink-400"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">12</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-fuchsia-50 border border-fuchsia-100 grid place-items-center text-fuchsia-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-fuchsia-400">SERVICE 12</span>
+      <!-- 12 fuchsia — Diagnostics -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-fuchsia-100 to-fuchsia-50">
+          <img src="https://loremflickr.com/520/300/car,diagnostic,computer?lock=112" alt="Diagnostics" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-fuchsia-200/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-fuchsia-200/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-fuchsia-300/70 select-none pointer-events-none">12</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-fuchsia-700 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-fuchsia-200">Service 12</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-fuchsia-200 shadow-lg grid place-items-center text-fuchsia-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Vehicle Inspection &amp; Diagnostics</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Full vehicle health check with OBD scanning, safety audit &amp; detailed inspection report for peace of mind.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 shrink-0"></span>OBD computer scanning</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 shrink-0"></span>Safety &amp; brake inspection</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 shrink-0"></span>Detailed inspection report</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Vehicle Inspection &amp; Diagnostics</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Full vehicle health check with OBD scanning, safety audit &amp; detailed inspection report for peace of mind.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-fuchsia-100 border border-fuchsia-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-fuchsia-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>OBD computer scanning</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-fuchsia-100 border border-fuchsia-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-fuchsia-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Safety &amp; brake inspection</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-fuchsia-100 border border-fuchsia-200 grid place-items-center shrink-0"><svg class="w-2 h-2 text-fuchsia-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Detailed inspection report</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-bold text-fuchsia-500">&#x20B9;500 <span class="font-normal text-stone-400">onwards</span></span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-fuchsia-500 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Starts at</span><span class="font-display font-bold text-[1.15rem] text-fuchsia-600">&#x20B9;500</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-fuchsia-500 hover:bg-fuchsia-600 transition-colors">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(120,113,108,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,tow,accident?lock=113" alt="Accident Vehicle Towing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-stone-400 to-stone-500"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">13</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-stone-100 border border-stone-200 grid place-items-center text-stone-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3M9 21h10a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-stone-400">SERVICE 13</span>
+      <!-- 13 stone — Towing -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-stone-200 to-stone-100">
+          <img src="https://loremflickr.com/520/300/car,tow,accident?lock=113" alt="Towing" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-stone-300/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-stone-300/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-stone-400/60 select-none pointer-events-none">13</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-stone-600 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-stone-300">Service 13</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-stone-200 shadow-lg grid place-items-center text-stone-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3M9 21h10a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Accident Vehicle Towing</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">24×7 accident &amp; breakdown towing service to the nearest garage or any location of your choice.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0"></span>24×7 emergency response</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0"></span>Safe &amp; insured towing</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0"></span>Any location pickup</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Accident Vehicle Towing</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">24&times;7 accident &amp; breakdown towing service to the nearest garage or any location of your choice.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-stone-200 border border-stone-300 grid place-items-center shrink-0"><svg class="w-2 h-2 text-stone-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>24&times;7 emergency response</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-stone-200 border border-stone-300 grid place-items-center shrink-0"><svg class="w-2 h-2 text-stone-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Safe &amp; insured towing</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-stone-200 border border-stone-300 grid place-items-center shrink-0"><svg class="w-2 h-2 text-stone-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Any location pickup</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-semibold text-brand">Price on Request</span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-stone-400 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Pricing</span><span class="font-display font-bold text-[1.15rem] text-brand">On Request</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-brand hover:opacity-90 transition-opacity">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
 
-      <article class="svc-card group relative bg-white rounded-2xl border border-stone-100 overflow-hidden transition-all duration-300 hover:-translate-y-2" style="--sg:rgba(120,113,108,.22)">
-        <div class="relative h-44 overflow-hidden bg-stone-900">
-          <img src="https://loremflickr.com/520/300/car,body,repair?lock=114" alt="Car Tinkering and Body Repair" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.style.display='none'">
-          <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-stone-400 to-stone-500"></div>
-          <span class="absolute left-3.5 top-3.5 font-mono text-[.68rem] font-bold text-white bg-black/35 px-2 py-0.5 rounded-md">14</span>
-        </div>
-        <div class="p-6 pt-5">
-          <div class="flex items-center gap-3 mb-3.5">
-            <div class="w-9 h-9 rounded-xl bg-stone-100 border border-stone-200 grid place-items-center text-stone-500 shrink-0"><svg class="w-[1.1rem] h-[1.1rem]" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8 7.2 20l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.6-.6-2.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <span class="font-mono text-[.6rem] font-bold tracking-[.12em] uppercase text-stone-400">SERVICE 14</span>
+      <!-- 14 stone — Body Repair -->
+      <article class="svc2-card group bg-white rounded-2xl overflow-hidden border border-stone-100 flex flex-col" style="box-shadow:0 2px 10px rgba(0,0,0,.055)">
+        <div class="relative h-44 overflow-hidden bg-gradient-to-br from-stone-200 to-stone-100">
+          <img src="https://loremflickr.com/520/300/car,body,repair?lock=114" alt="Body Repair" class="svc2-img absolute inset-0 w-full h-full object-cover opacity-40" onerror="this.style.display='none'">
+          <div class="absolute -right-6 -top-6 w-32 h-32 rounded-full bg-stone-300/50 pointer-events-none"></div>
+          <div class="absolute -left-4 -bottom-4 w-20 h-20 rounded-full bg-stone-300/40 pointer-events-none"></div>
+          <span class="absolute right-3 bottom-1 font-display font-extrabold text-[5rem] leading-none text-stone-400/60 select-none pointer-events-none">14</span>
+          <span class="absolute top-4 left-4 font-mono text-[.6rem] font-bold tracking-widest uppercase text-stone-600 bg-white/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-stone-300">Service 14</span>
+          <div class="absolute bottom-0 right-5 translate-y-1/2 w-11 h-11 rounded-xl bg-white border border-stone-200 shadow-lg grid place-items-center text-stone-500 z-10">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L4 16.8 7.2 20l5.3-5.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.3-.6-.6-2.3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
           </div>
-          <h3 class="font-display font-bold text-[1.1rem] text-ink mb-2">Car Tinkering &amp; Body Repair</h3>
-          <p class="text-sm text-stone-500 leading-relaxed mb-3">Minor &amp; major body repair, panel beating &amp; restoration for accident-damaged or worn vehicle bodies.</p>
-          <ul class="space-y-1.5 mb-4">
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0"></span>Panel beating &amp; reshaping</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0"></span>Accident damage restoration</li>
-            <li class="flex items-center gap-2 text-[.8rem] text-stone-600"><span class="w-1.5 h-1.5 rounded-full bg-stone-400 shrink-0"></span>Welding &amp; body alignment</li>
+        </div>
+        <div class="p-5 pt-8 flex flex-col flex-1">
+          <h3 class="font-display font-bold text-[1.08rem] text-ink mb-2">Car Tinkering &amp; Body Repair</h3>
+          <p class="text-[.82rem] text-stone-500 leading-relaxed mb-3.5">Minor &amp; major body repair, panel beating &amp; restoration for accident-damaged or worn vehicle bodies.</p>
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-stone-200 border border-stone-300 grid place-items-center shrink-0"><svg class="w-2 h-2 text-stone-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Panel beating &amp; reshaping</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-stone-200 border border-stone-300 grid place-items-center shrink-0"><svg class="w-2 h-2 text-stone-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Accident damage restoration</li>
+            <li class="flex items-center gap-2 text-[.79rem] text-stone-600"><span class="w-4 h-4 rounded-full bg-stone-200 border border-stone-300 grid place-items-center shrink-0"><svg class="w-2 h-2 text-stone-600" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Welding &amp; body alignment</li>
           </ul>
-          <div class="flex items-center justify-between mt-auto pt-1">
-            <span class="text-[.78rem] font-semibold text-brand">Price on Request</span>
-            <a href="#book" class="inline-flex items-center gap-1.5 text-[.82rem] font-semibold text-stone-400 group-hover:gap-2.5 transition-all">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <div class="mt-auto pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div><span class="text-[.6rem] text-stone-400 font-mono uppercase tracking-wider block mb-0.5">Pricing</span><span class="font-display font-bold text-[1.15rem] text-brand">On Request</span></div>
+            <a href="#book" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-[.81rem] font-semibold text-white bg-brand hover:opacity-90 transition-opacity">Book now <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
@@ -647,7 +679,7 @@
     </div>
 
     <!-- city banner -->
-    <div class="mt-6 rounded-2xl p-7 md:p-8 bg-gradient-to-r from-ink to-stone-800 text-white flex flex-col md:flex-row md:items-center justify-between gap-5" data-reveal>
+    <div class="mt-8 rounded-2xl p-7 md:p-8 bg-gradient-to-r from-ink to-stone-800 text-white flex flex-col md:flex-row md:items-center justify-between gap-5" data-reveal>
       <div class="flex items-center gap-4">
         <span class="w-12 h-12 rounded-xl bg-brand grid place-items-center shrink-0"><svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.6"/></svg></span>
         <div><h3 class="font-display text-xl font-bold">Car service in <span class="text-brand">[Your City]</span></h3><p class="text-sm text-stone-300">Trusted multi-brand garage near you — free pickup &amp; drop.</p></div>
